@@ -1,11 +1,6 @@
-# gator:light Light Sensor
+# BearLab Module Block
 
-[![Community Discord](https://img.shields.io/discord/448979533891371018.svg)](https://aka.ms/makecodecommunity)
-
-The gator:starter, which includes the gator:light and gator:temp can be purchased [here.](https://www.sparkfun.com/products/14891)
-The gator:light, included on the gator:starter is an analog light sensor that can be alligator clipped to the micro:bit or gator:bit board.
-
-![SparkFun gator:light](https://raw.githubusercontent.com/sparkfun/pxt-gator-light/master/icon.png)  
+![BearLab](https://raw.githubusercontent.com/sparkfun/pxt-gator-light/master/icon.png)  
 
 ## ~ hint
 
