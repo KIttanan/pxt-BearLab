@@ -33,7 +33,7 @@ namespace BearLab {
   /**
   * Reads the number
   */
-  //% weight=30 blockId="BearLab" block="Test Bear lab connector %pin | in %BearLabType"
+  //% weight=30 blockId="BearLab" block="Test Bear lab %pin | connector %pin | in %BearLabType"
   export function BearLab(pin: AnalogPin, type: BearLabType): number {
     let ADCVal = pins.analogReadPin(pin)
     switch (type) {
