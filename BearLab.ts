@@ -34,10 +34,10 @@ namespace BearLab {
   * Reads the number
   */
   //% weight=30 blockId="BearLab" block="Test Bear lab connector %pin | in %BearLabType"
-  export function moisture(pin: AnalogPin, type: BearLabType): number {
+  export function BearLab(pin: AnalogPin, type: BearLabType): number {
     let ADCVal = pins.analogReadPin(pin)
     switch (type) {
-      case BearLabType.moisture: return BearLab(ADCVal)
+      case BearLabType.moisture: return getBearLab(ADCVal)
       case BearLabType.adcVal: return ADCVal
       default: return -11111111
     }
