@@ -5,7 +5,7 @@
 
 * Development environment specifics:
 * Written in Microsoft Makecode
-* Tested with a BearLab Module sensor and micro:bit
+* Tested with a BearLabb MModule sensor and micro:bit
 *
 * This code is released under the [MIT License](http://opensource.org/licenses/MIT).
 * Please review the LICENSE.md file included with this example. If you have any questions
