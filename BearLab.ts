@@ -14,16 +14,16 @@
 */
 
 
-/**
- * Functions to operate the BearLab sensor
- */
+
 
 enum BearLabType {
   moisture = 1,
   adcVal = 2,
 }
 
-
+/**
+ * Custom blocks
+ */
 
 //% color=#0fbc11 icon="\f1b0"
 namespace BearLab {
