@@ -16,7 +16,7 @@
      * Distributed as-is; no warranty is given.
      */
 
-declare namespace gatorlight {
+declare namespace BearLab {
 }
 
 // Auto-generated. Do not edit. Really.

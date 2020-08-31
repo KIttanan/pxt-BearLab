@@ -1,15 +1,15 @@
 {
-    "name": "gatorlight",
-    "version": "0.0.3",
-    "description": "SparkFun gator:light Temperature Sensor",
+    "name": "BearLab",
+    "version": "0.0.1",
+    "description": "BearLab:Module",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "gatorlight.ts",
-        "gatorlight.cpp",
+        "BearLab.ts",
+        "BearLab.cpp",
         "shims.d.ts",
         "enums.d.ts"
     ],

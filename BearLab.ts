@@ -1,7 +1,7 @@
 /**
 * Andy England @ SparkFun Electronics
 * September 6, 2018
-* https://github.com/sparkfun/pxt-light-bit
+* https://github.com/KIttanan/pxt-BearLab
 
 * Development environment specifics:
 * Written in Microsoft Makecode
@@ -18,38 +18,40 @@
  * Functions to operate the gatorlight sensor
  */
 
- enum gatorlightType{
-	 Lux=1,
-	 adcVal=2,
- }
+enum BearLabType {
+  moisture = 1,
+  adcVal = 2,
+}
 
 
 
 //% color=#f44242 icon="\uf185"
-namespace gatorlight {
+namespace BearLab {
 
-    // Functions for reading light from the gatorlight in lux or straight adv value
+  // Functions for reading light from the gatorlight in lux or straight adv value
 
-    /**
-    * Reads the number
-    */
-    //% weight=30 blockId="gatorlight_light" block="Get light on pin %pin | in %gatorlightType"
-    export function light(pin: AnalogPin, type: gatorlightType): number{
-      let ADCVal = pins.analogReadPin(pin)
-      switch(type){
-        case gatorlightType.Lux: return getLux(ADCVal)
-        case gatorlightType.adcVal: return ADCVal
-        default: return -11111111
-      }
+  /**
+  * Reads the number
+  */
+  //% weight=30 blockId="BearLab" block="Get moisture on pin %pin | in %BearLabType"
+  export function moisture(pin: AnalogPin, type: BearLabType): number {
+    let ADCVal = pins.analogReadPin(pin)
+    switch (type) {
+      case BearLabType.moisture: return BearLab(ADCVal)
+      case BearLabType.adcVal: return ADCVal
+      default: return -11111111
     }
+  }
+
 
 	/**
      * Function used for simulator, actual implementation is in gatorlight.cpp
      */
-    //% shim=gatorlight::getLux
-    function getLux(ADCVal: number) {
-        // Fake function for simulator
-        return 0
-    }
+  //% shim=gatorMoisture::getBearLab
+  function getBearLab(ADCVal: number) {
+    // Fake function for simulator
+    return 0
+  }
 
-    }
+
+}
