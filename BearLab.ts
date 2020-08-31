@@ -5,7 +5,7 @@
 
 * Development environment specifics:
 * Written in Microsoft Makecode
-* Tested with a SparkFun gatorlight sensor and micro:bit
+* Tested with a BearLab Module sensor and micro:bit
 *
 * This code is released under the [MIT License](http://opensource.org/licenses/MIT).
 * Please review the LICENSE.md file included with this example. If you have any questions
@@ -15,7 +15,7 @@
 
 
 /**
- * Functions to operate the gatorlight sensor
+ * Functions to operate the BearLab sensor
  */
 
 enum BearLabType {
@@ -28,12 +28,12 @@ enum BearLabType {
 //% color=#f44242 icon="\uf185"
 namespace BearLab {
 
-  // Functions for reading light from the gatorlight in lux or straight adv value
+  // Functions for reading light from the BearLab in lux or straight adv value
 
   /**
   * Reads the number
   */
-  //% weight=30 blockId="BearLab" block="Get moisture on pin %pin | in %BearLabType"
+  //% weight=30 blockId="BearLab" block="Test Bear lab connector %pin | in %BearLabType"
   export function moisture(pin: AnalogPin, type: BearLabType): number {
     let ADCVal = pins.analogReadPin(pin)
     switch (type) {
@@ -45,7 +45,7 @@ namespace BearLab {
 
 
 	/**
-     * Function used for simulator, actual implementation is in gatorlight.cpp
+     * Function used for simulator, actual implementation is in BearLab.cpp
      */
   //% shim=gatorMoisture::getBearLab
   function getBearLab(ADCVal: number) {
