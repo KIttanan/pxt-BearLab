@@ -25,7 +25,7 @@ enum BearLabType {
 
 
 
-//% color=#f44242 icon="\uf185"
+//% color=#f44242 icon="\f1b0"
 namespace BearLab {
 
   // Functions for reading light from the BearLab in lux or straight adv value
@@ -47,7 +47,7 @@ namespace BearLab {
 	/**
      * Function used for simulator, actual implementation is in BearLab.cpp
      */
-  //% shim=gatorMoisture::getBearLab
+  //% shim=BearLab::getBearLab
   function getBearLab(ADCVal: number) {
     // Fake function for simulator
     return 0
