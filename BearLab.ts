@@ -25,7 +25,7 @@ enum BearLabType {
 
 
 
-//% color=#f44242 icon="\f1b0"
+//% color=#0fbc11 icon="\f1b0"
 namespace BearLab {
 
   // Functions for reading light from the BearLab in lux or straight adv value
