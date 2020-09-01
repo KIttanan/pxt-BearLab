@@ -27,6 +27,54 @@ enum BearLabType {
 
 //% weight=100 color=#0fbc11 icon="\f1b0"
 namespace BearLab {
+  let _x: number;
+  let _y: number;
+  let _direction: number; // 0 right, 1 down, 2 left, 3 top
+  let _brightness: number;
+  let _penMode: TurtlePenMode = TurtlePenMode.Up;
+  let _img: Image;
+  let _delay = 250;
 
+  function init() {
+    if (!_img) {
+      led.setBrightness(255);
+      led.setDisplayMode(DisplayMode.Greyscale);
+      _x = 2;
+      _y = 2;
+      _direction = 3;
+      _brightness = 128;
+      _img = images.createImage(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+      basic.clearScreen();
+    }
+  }
+
+  function turn(quadrants: number): void {
+    init();
+    _direction = (_direction + quadrants) % 4; if (_direction < 0) _direction += 4;
+  }
+
+  /**
+   * Turns left by 90 degrees
+   */
+  //% blockId=turtleTurnLeft block="turn left"
+  //% weight=89 blockGap=8
+  export function turnLeft(): void {
+    turn(-1);
+  }
+
+  /**
+   * Turns right by 90 degrees
+   */
+  //% blockId=turtleTurnRight block="turn right"
+  //% weight=88 blockGap=8
+  export function turnRight(): void {
+    turn(1);
+  }
 
 }
