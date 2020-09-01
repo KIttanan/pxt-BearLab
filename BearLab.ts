@@ -31,7 +31,6 @@ namespace BearLab {
   let _y: number;
   let _direction: number; // 0 right, 1 down, 2 left, 3 top
   let _brightness: number;
-  let _penMode: TurtlePenMode = TurtlePenMode.Up;
   let _img: Image;
   let _delay = 250;
 
