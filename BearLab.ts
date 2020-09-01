@@ -25,33 +25,8 @@ enum BearLabType {
  * Custom blocks
  */
 
-//% color=#0fbc11 icon="\f1b0"
+//% weight=100 color=#0fbc11 icon="\f1b0"
 namespace BearLab {
-
-  // Functions for reading light from the BearLab in lux or straight adv value
-
-  /**
-  * Reads the number
-  */
-  //% weight=30 blockId="BearLab" block="Test Bear lab connector %pin | in %BearLabType"
-  export function BearLab(pin: AnalogPin, type: BearLabType): number {
-    let ADCVal = pins.analogReadPin(pin)
-    switch (type) {
-      case BearLabType.moisture: return getBearLab(ADCVal)
-      case BearLabType.adcVal: return ADCVal
-      default: return -11111111
-    }
-  }
-
-
-	/**
-     * Function used for simulator, actual implementation is in BearLab.cpp
-     */
-  //% shim=BearLab::getBearLab
-  function getBearLab(ADCVal: number) {
-    // Fake function for simulator
-    return 0
-  }
 
 
 }
